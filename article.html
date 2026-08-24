@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Article | Conseils & Guides Techniques | SEJJELEC Maroc</title>
+
+    <meta name="description"
+          content="Découvrez les conseils et guides techniques de SEJJELEC sur l'électricité industrielle, les réseaux MT/BT, les postes transformateurs, l'énergie solaire et le courant faible au Maroc.">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="SEJJELEC">
+
+    <link rel="canonical" id="canonical-link" href="https://www.sejjelec.com/article.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" id="og-title" 
+          content="Conseils & Guides Techniques | SEJJELEC">
+    <meta property="og:description" id="og-description"
+          content="Découvrez les conseils et informations techniques de SEJJELEC sur les installations électriques, les réseaux MT/BT, les postes transformateurs et les solutions énergétiques au Maroc.">
+    <meta property="og:image" id="og-image"
+          content="https://www.sejjelec.com/images/hero.webp">
+    <meta property="og:url" id="og-url"
+          content="https://www.sejjelec.com/article.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="Conseils & Guides Techniques | SEJJELEC">
+    <meta name="twitter:description" id="twitter-description"
+          content="Guides et conseils techniques SEJJELEC.">
+    <meta name="twitter:image" id="twitter-image"
+          content="https://www.sejjelec.com/images/hero.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/variables.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/hero.css">
+    <link rel="stylesheet" href="CSS/a-propos.css">
+    <link rel="stylesheet" href="CSS/article.css">
+    <link rel="stylesheet" href="CSS/faq-CTA.css">
+    <link rel="stylesheet" href="CSS/blog.css">
+    <link rel="stylesheet" href="CSS/contact-CTA.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/floating-icons.css">
+
+    <style>
+        .hero::before{
+            background-image:var(--hero-image-1);
+            transform:scaleX(1);
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <!-- Logo -->
+                <a href="index.html" class="navbar-logo">
+                    <img src="images/sejjelek_logo_only.png" alt="SEJJELEC Logo">
+                    <span>SEJJELEC</span>
+                </a>
+
+                <div class="navbar-actions">
+                <!-- Menu -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle"> <!--toggle menu for phones-->
+                    <label for="menu-toggle" class="hamburger">
+                        <span></span>
+                    </label>
+
+                    <ul class="navbar-menu">
+                        <li><a href="index.html">Accueil</a></li>
+
+                        <li><a href="a-propos.html">À propos</a></li>
+
+                        <li><a href="services.html#services">Services</a></li>
+
+                        <li><a href="faq.html">FAQ</a></li>
+
+                        <!-- Right Side -->
+                        <li><a href="blog.html">Blog</a></li>
+                        
+                        <a href="contact.html#contact" class="primary-btn">
+                            Contactez-nous
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                    <hr>
+                    <ol>
+
+                        <li><a href="index.html">Accueil</a></li>
+
+                        <li><a href="blog.html">Blog</a></li>
+
+                        <li aria-current="page" id="article-breadcrumb-title"></li>
+
+                    </ol>
+
+                </nav>
+
+<!-- ==========================================================
+                        BLOG HERO
+========================================================== -->
+
+    <header class="hero blog-hero" id="hero">
+
+        <div class="container hero-content">
+
+            <!-- Hero Text -->
+            <div class="hero-info">
+
+                <div class="hero-text">
+
+                    <h1 id="article-title"></h1>
+
+                    <p id="article-description"></p>
+
+                </div>
+
+                <!-- Article information -->
+                <div class="hero-buttons article-info">
+
+                    <div class="article-author">
+                        <span>Publié par</span>
+                        <strong id="article-author"></strong>
+                    </div>
+
+                    <div class="article-date">
+
+                        <span>Dernière mise à jour</span>
+
+                        <strong id="article-date"></strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+<!-- ==========================================================
+                        BLOG ARTICLE
+========================================================== -->
+
+        <section class="blog-article">
+
+            <div class="container">
+                
+                <div class="blog-meta">
+
+                        <span class="blog-category" id="article-category"></span>
+
+                        <span class="separator">•</span>
+
+                        <time id="article-date"></time>
+
+                        <span class="separator">•</span>
+
+                        <span id="article-reading-time"></span>
+
+                </div>
+
+                <article class="article-content"
+                        id="article-content">
+                </article>
+
+            </div>
+
+        </section>
+         <!-- ==========================
+                FAQ CTA SECTION
+        ========================== -->
+        <section class="service-help">
+
+            <div class="container">
+                <div class="service-help-card">
+                    <a href="faq.html#faq" >
+                        <h2 >Vous avez une question ?</h2>
+
+                        <p>
+                            Consultez notre FAQ pour trouver rapidement des réponses à vos questions sur nos services, nos interventions, nos délais, nos solutions électriques et notre accompagnement technique.
+                        </p>
+                        <p class="primary-btn">
+                            Trouver une réponse rapidement
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- =========================================
+                     FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+    <!-- ==========================================
+                            CONTACT CTA
+            ========================================== -->
+            <section class="contact-cta" id="contact-cta">
+
+                <div class="container">
+
+                    <div class="cta-content">
+
+                        <div class="cta-text">
+                            <h2>
+                                Parlons de votre projet électrique
+                            </h2>
+
+                            <p>
+                                Vous avez un projet d'installation, de rénovation ou de maintenance électrique ? 
+                            <p>
+                                Contactez SEJJELEC pour échanger sur vos besoins et obtenir une étude adaptée à votre projet.
+                            </p>                            
+                            <a href="contact.html" class="cta-button">
+                                <span>Demander une consultation</span>
+                                <img
+                                    src="images/icons/logo-only.svg"
+                                    alt="Logo SEJJELEC"
+                                >
+                            </a>
+
+                        </div>
+
+                        <div class="cta-background">
+                            <img
+                                src="images/icons/logo-watermark.svg"
+                                alt=""
+                                aria-hidden="true">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <div class="container">
+            <div class="footer-top">
+
+                <!-- Company -->
+                <div class="footer-company">
+                    <img src="images/sejjelek_logo_only.png" alt="SEJJELEC" class="footer-logo">
+                    <p class="footer-description"> 
+                        SEJJELEC est une entreprise marocaine spécialisée depuis plus de 15 ans dans l'électricité industrielle, les postes de transformation, les réseaux MT/BT, l'énergie solaire et les solutions de courant faible.
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <address>
+                        <h3>Nos coordonnées</h3>
+                        <ul>
+                            <li>
+                                Bureau N°4, 2ème étage, Résidence La Shope,
+                                15 Rue Sebou, Kénitra 14000
+                            </li>
+
+                            <li>
+                                <a href="tel:+212661240857">
+                                    +212 6 61 24 08 57
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="tel:+212537373764" rel="nofollow">
+                                    +212 5 37 37 37 64
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+212537373771" rel="nofollow">
+                                    +212 5 37 37 37 71
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mailto:sejjelec@gmail.com">
+                                    sejjelec@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <!-- Services -->
+                <div class="footer-column">
+                    <h3>Nos Services</h3>
+                    <ul>
+                        <li><a href="reseaux-mt-bt-ep.html#about">Réseaux MT/BT et Éclairage Public</a></li>
+                        <li><a href="poste-transformateur.html#about">Postes Transformateurs</a></li>
+                        <li><a href="electricite-industrielle-batiment.html#about">Électricité Industrielle & Bâtiment</a></li>
+                        <li><a href="transition-solaire.html#about">Énergie Solaire</a></li>
+                        <li><a href="courant-faible.html#about">Courant Faible CFA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/ste-sejjelec-sarl"
+                            aria-label="LinkedIn"
+                            class="social-icon">
+                            <img class="normal"
+                                src="images/icons/Linkedin.png"
+                                alt="LinkedIn">
+
+                            <img class="hover"
+                                src="images/icons/Linkedin-hover.png"
+                                alt="">
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCmSkFoHL6QBEl__XwAh16fg"
+                            aria-label="YouTube"
+                            class="social-icon">
+                            <img class="normal"
+                                src="images/icons/youtube.png"
+                                alt="">
+
+                            <img class="hover"
+                                src="images/icons/youtube-hover.png"
+                                alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <p>© 2026 SEJJELEC. Tous droits réservés.</p>
+                    <div class="footer-legal">
+                        <a href="#">Mentions légales</a>
+                        <a href="#">Politique de confidentialité</a>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- =========================================
+            Floating Contact Buttons
+    =========================================== -->
+    <div class="floating-contact">
+
+        <a href="tel:+212661240857"
+        class="floating-btn phone-btn"
+        aria-label="Téléphone"
+        rel="nofollow">
+
+            <img src="images/icons/call.png" alt="">
+
+            <span>Appelez-nous</span>
+
+        </a>
+
+        <a href="https://wa.me/212661240857"
+        target="_blank"
+        class="floating-btn whatsapp-btn"
+        aria-label="WhatsApp"
+        rel="noopener noreferrer">
+
+            <img src="images/icons/whatsapp.png" alt="">
+
+            <span>Écrivez-nous sur WhatsApp</span>
+
+        </a>
+    </div>
+
+    <script src="JS/article.js"></script>
+</body>
+</html>

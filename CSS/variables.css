@@ -1,0 +1,76 @@
+:root{
+
+    /*==============================
+        COLORS
+    ==============================*/
+
+    --primary-color:#FF6B00;
+    --primary-color-navbar:#ff6a00ea;
+
+    --text-dark:#121212;
+    --text-light:#ffffff;
+
+    --text-gray:#555555;
+    --subtext-gray : #5d5d5d;
+    --text-light-gray:#9a9a9a;
+    --text-gray-hero : #262525;
+    
+    --background:#e5e1da;
+    --background-light:#ffffff;
+    --background-gray:#d3d0cb;
+
+    --border:#707070;
+
+    /*==============================
+        LAYOUT
+    ==============================*/
+
+    --max-width:1600px;
+    --section-width:1400px;
+
+    --navbar-height: 4rem;
+
+    --header-height:85px;
+    --topbar-height:36px;
+
+    --radius-small:4px;
+    --radius:8px;
+    --radius-large:12px;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    --transition:.35s ease;
+
+    /*==============================
+        HERO SHAPE
+    ==============================*/
+
+    --grid-scale:clamp(95px,14.5vw,240px);
+    --shape-gap:clamp(4px,.7vw,12px);
+
+    /*==============================
+        Images
+    ==============================*/
+
+    --hero-image : url("../images/background/sejjelec.webp");
+
+    --hero-image-1: url("../images/Toiture-solaire-1024x683.webp");
+    --hero-image-2: url("../images/hero/images.jpg");
+    --hero-image-3: url("../images/hero/WhatsApp-Image-2024-12-23-at-10.00.41_591a0cd1-1152x1536.webp");
+
+    /* Buttons */
+
+    --button-padding-y: .75rem;
+    --button-padding-x: 1.3rem;
+
+    --button-radius: 20px;
+
+    --button-shadow: 0 0 20px rgba(255,107,0,.25);
+
+    /*==============================
+        Fonts
+    ==============================*/
+    --montserrat : "Montserrat",sans-serif;
+    --outfit: "Outfit", sans-serif;
+}

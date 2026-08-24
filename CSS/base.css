@@ -1,0 +1,149 @@
+/* ===========================
+        RESET
+=========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Montserrat",sans-serif;
+    color:var(--text-dark);
+    background:var(--background-light);
+    line-height:1.6;
+    letter-spacing: 6%;
+    overflow-x:hidden;
+    
+}
+
+h1,h2,h3,h4 {
+    font-family: "Outfit", sans-serif;
+}
+
+p {
+    line-height: 1.8;
+}
+
+address {
+    font-style: normal;
+}
+
+/*==================================================
+                GLOBAL ELEMENTS
+==================================================*/
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul,ol{
+    list-style:none;
+}
+button,
+input,
+textarea,
+select{
+    font:inherit;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+button {
+    cursor : pointer;
+}
+
+section , header , footer{
+    width:100%;
+}
+
+/*==================================================
+                    CONTAINER
+==================================================*/
+
+.container{
+    width:min(100%,var(--section-width));
+}
+
+/*==================================================
+                SECTION TITLE
+==================================================*/
+
+.section-header {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: clamp(8px,1vw,2.5rem);
+    margin-bottom:clamp(8px,1vw,2.5rem);
+
+    color:var(--text-dark);
+}
+
+.section-header p {
+    display: inline-flex;
+    align-items: flex-start;
+
+    margin-top: clamp(8px,1vw,2rem);
+    margin-bottom:clamp(8px,0.75vw,2.5rem);
+    font-size:clamp(0.9rem,1.2vw,2rem);
+    line-height:1.8;
+    color:var(--text-gray);
+    
+}
+
+@media (max-width:900px){
+
+.section-header{
+    flex-direction:column;
+    display: inline-flex;
+    align-items: flex-start;
+}
+}
+
+/*==================================================
+                GENERIC BUTTONS
+==================================================*/
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:.7rem;
+    padding:.85rem 1.5rem;
+    border-radius:var(--border-radius);
+
+    transition:var(--transition);
+}
+
+.btn img{
+    width:22px;
+    height:22px;
+}
+
+
+/*==================================================
+            ACCESSIBILITY
+==================================================*/
+
+:focus-visible{
+    outline:2px solid var(--primary-color);
+    outline-offset:4px;
+}
+

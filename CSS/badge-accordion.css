@@ -1,0 +1,127 @@
+/* =========================
+   BADGE STYLE ACCORDION
+========================= */
+
+.badge-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+}
+
+/* =========================
+   ACCORDION ITEM
+========================= */
+
+.badge-accordion-item {
+    border: 3px solid var(--border);
+    border-radius: var(--radius-small);
+    overflow: hidden;
+    background: transparent;
+
+    transition: border-color .35s ease,
+                background .35s ease;
+}
+
+/* =========================
+   HEADER = BADGE
+========================= */
+
+.badge-accordion-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding:
+        .6rem
+        1rem;
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: clamp(0.9rem,1.2vw,1.7rem);
+    font-weight: 550;
+
+    color: var(--text-dark);
+
+    transition: color .35s ease,
+                background .35s ease;
+}
+
+/* Remove default button styling */
+
+.badge-accordion-header h3 {
+    margin: 0;
+
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+/* =========================
+   PLUS / MINUS ICON
+========================= */
+
+.badge-accordion-icon {
+    flex-shrink: 0;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+
+    color: inherit;
+
+    transition: transform .35s ease;
+}
+
+/* =========================
+   ACTIVE
+========================= */
+
+.badge-accordion-item.active {
+    border-color: var(--primary-color);
+    background: #fff;
+}
+
+.badge-accordion-item.active .badge-accordion-header {
+    color: var(--primary-color);
+}
+/* =========================
+   CONTENT
+========================= */
+
+.badge-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height .45s ease;
+}
+
+.badge-accordion-content p {
+    margin: 0;
+    padding: 0 1.2rem 1rem;
+
+    color: var(--text-gray);
+    line-height: 1.6;
+
+    font-size:clamp(0.9rem,1.2vw,1.5rem) ;
+}
+
+/* =========================
+   OPEN CONTENT
+========================= */
+
+.badge-accordion-item.active .badge-accordion-content {
+    max-height: 250px;
+}
+
+@media(max-width:500px){
+    .badge-accordion {
+        width: 100%;
+    }
+}

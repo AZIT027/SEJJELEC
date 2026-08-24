@@ -1,0 +1,108 @@
+/* =====================================
+        FAQ CTA
+===================================== */
+
+.service-help{
+    width: 100%;
+    padding-top: clamp(0.9rem,2vw,4.5rem);
+    padding-left: clamp(0.9rem,3vw,3rem);
+    padding-right: clamp(0.9rem,3vw,3rem) ;
+    padding-bottom: clamp(0.9rem,2vw,4.5rem) ;
+
+    background:var(--background);
+    overflow:hidden;
+}
+
+.service-help-card{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    width: 100%;
+    overflow:hidden;
+
+    padding:
+        clamp(1.5rem,2.5vw,3rem);
+
+    background:#ffffffc0;
+    border:2px solid #cbc9c9;
+    border-radius:var(--radius-small);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.06);
+
+    transition:.35s ease;
+}
+
+.service-help-card:hover{
+    background:#fff;
+    border-color:var(--primary-color);
+    box-shadow:0 20px 45px rgba(255,107,0,.12);
+    transform:translateY(-4px);
+}
+
+.service-help h2{
+    margin-bottom:1rem;
+
+    font-size:clamp(1.6rem,2vw,3.4rem);
+    font-weight:700;
+
+    color:var(--text-dark);
+}
+
+.service-help p{
+    margin-bottom:2rem;
+
+    color:var(--text-gray);
+    max-width: 1200px;
+
+    font-size:clamp(0.9rem,1.2vw,2rem);
+}
+
+/* CTA Button */
+
+.service-help .primary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:.95rem 1.5rem;
+
+    background:var(--primary-color);
+    border : 2px solid #FF6B00;
+    color:#fff;
+
+    border-radius:var(--radius-small);
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.service-help .primary-btn:hover{
+    color: var(--primary-color);
+    background:var(--background-light);
+    transform:translateY(-3px);
+    box-shadow:
+        0 7px 15px rgba(253, 198, 150, 0.948);
+    transition: all 0.4s ease;
+}
+
+
+@media ( max-width: 800px) {
+.service-help .primary-btn{
+    display:flex;
+    
+    padding:.5rem .7rem;
+
+    background:var(--primary-color);
+    border : 2px solid #FF6B00;
+    color:#fff;
+    font-size:clamp(0.85rem,1vw,2rem);
+    border-radius:var(--radius-small);
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+}

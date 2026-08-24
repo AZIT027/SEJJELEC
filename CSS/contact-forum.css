@@ -1,0 +1,573 @@
+/* ==========================================================
+   CONTACT SECTION
+========================================================== */
+.contact {
+    padding-top: clamp(0.9rem,2vw,4.5rem);
+    padding-left: clamp(0.9rem,3vw,3rem);
+    padding-right: clamp(0.9rem,3vw,3rem) ;
+    padding-bottom: clamp(0.9rem,2vw,4.5rem) ; 
+    background:var(--background);
+    overflow:hidden;
+}
+/* ==========================================================
+   MAIN CONTAINER
+========================================================== */
+.contact-container{
+    position:relative;
+
+    border-radius:var(--radius-small);
+
+    overflow:hidden;
+}
+/* ==========================================================
+   BACKGROUND LAYER
+========================================================== */
+.contact-background{
+    position:relative;
+    display:grid;
+    grid-template-columns:66% 34%;
+}
+/* ==========================================================
+   WATERMARK
+========================================================== */
+.contact-background::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:url("../images/sejjelek_logo_only.png");
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-size:65%;
+    opacity:.14;
+
+    pointer-events:none;
+}
+/* ==========================================================
+   LEFT COLUMN = FORUM
+========================================================== */
+.contact-form-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+
+    padding:
+        clamp(1.5rem,3vw,4.5rem)
+        clamp(1.5rem,2.5vw,3rem);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff6b00 0%,
+            #ff6b00 40%,
+            rgba(255, 107, 0, 0.4) 100%
+        );
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.08);
+}
+/* ==========================================================
+   RESPONSIVE LAYOUT
+========================================================== */
+@media (max-width:900px){
+    .contact-background{
+        grid-template-columns:1fr;
+        min-height:auto;
+    }
+    .contact-form-container{
+        position:relative;
+        background:#ff6b00;
+    }
+
+    .contact-info{
+        align-items:flex-start;
+
+        padding:4rem 2rem;
+    }
+
+    .contact-background::before{
+        background-size:80%;
+        background-position:center;
+
+        opacity:.08;
+    }
+}
+
+@media (max-width:500px){
+    .contact {
+        background:var(--background);
+        overflow:hidden;
+    }
+
+    .contact-form-container{
+        padding:
+            clamp(.8rem,2vw,2rem)
+            clamp(.8rem,2vw,2rem);
+    }
+
+    .contact-background::before{
+        background-size:80%;
+        background-position:center;
+
+        opacity:.08;
+    }
+}
+/* ==================================
+   WHITE HEADER CARD
+===================================== */
+.contact-form-container .section-header{
+    width:100%;
+
+    background:white;
+    border-radius:var(--radius-small);
+
+    padding:
+        2rem
+        1.5rem;
+    margin-bottom:3rem;
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.08);
+}
+
+.contact-form-container .section-header h2 {
+    color:var(--primary-color);
+    font-size:clamp(2rem,2vw,3.4rem);
+    line-height:1.15;
+
+    margin-bottom:.7rem;
+}
+
+.contact-form-container .section-header p{
+    font-size:clamp(.95rem,1.3vw,2rem);
+}
+/* ==========================================================
+   CONTACT FORM
+========================================================== */
+#contact-form{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+
+    gap:1.35rem;
+}
+/* ==========================================================
+   INPUT ROW
+========================================================== */
+.input-row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.5rem;
+}
+/* ==========================================================
+   INPUT GROUP
+========================================================== */
+.input-group{
+    display:flex;
+    flex-direction:column;
+    gap:.65rem;
+}
+
+.input-group label{
+    color:#fff;
+    font-size:.98rem;
+    font-weight:540;
+    letter-spacing:.2px;
+}
+/* ==========================================================
+   INPUTS
+========================================================== */
+.input-group input,
+.input-group select,
+.input-group textarea{
+    width:100%;
+
+    border:none;
+    outline:none;
+
+    border-radius:var(--radius-small);
+    background:#ffffffd8;
+    color:var(--text-dark);
+    font-size:1rem;
+    font-family:inherit;
+
+    transition:
+        background .35s,
+        transform .35s,
+        box-shadow .35s;
+}
+
+.selected-files{
+    margin-top:1rem;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:.8rem;
+
+    padding:1rem;
+
+    background:#ffffffd8;
+
+    border-radius:var(--radius-small);
+
+}
+
+.selected-files:empty{
+
+    display:none;
+
+}
+
+.file-chip{
+    display:flex;
+    align-items:center;
+    flex-direction: row;
+
+    gap:.6rem;
+
+    padding: 0rem 1rem;
+
+    background: white;
+    border: 2px solid #ff6b00;
+        color:var(--text-dark);
+
+    border-radius:var(--radius-small);
+
+    font-size:.9rem;
+
+}
+
+
+.file-chip p {
+    color:var(--text-dark);
+}
+
+.file-icon {
+    width: 20px;
+}
+
+.file-chip button{
+
+    border:none;
+    background:none;
+
+    color:var(--primary-color);
+
+    cursor:pointer;
+
+    font-size:2rem;
+
+}
+
+/*==============================
+        Upload
+==============================*/
+
+.upload-box{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    min-height:60px;
+
+    padding:.7rem;
+
+    background:#ffffffd8;
+
+    border-radius:var(--radius-small);
+
+    transition:.35s;
+}
+
+@media (max-width:1200px){
+    .upload-box{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.upload-box:hover{
+
+    background:#fff;
+
+}
+
+.upload-placeholder{
+    display:flex;
+    justify-content:center;
+
+    font-size:.95rem;
+
+}
+
+.upload-placeholder p {
+    display: flex;
+    align-items: flex-start;
+    padding:.7rem;
+}
+
+.upload-btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:.8rem 1.2rem;
+    border-radius:var(--radius-small);
+    
+    background:var(--primary-color);
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.upload-btn:hover{
+
+    background:#e55e00;
+
+}
+
+#attachment{
+    display:none;
+}
+/* ==========================================================
+   INPUT HEIGHTS
+========================================================== */
+.input-group input,
+.input-group select{
+    height:52px;
+    padding:0 1.2rem;
+}
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+.input-group textarea{
+    resize:none;
+    min-height:180px;
+
+    padding:1rem 1.2rem;
+    line-height:1.6;
+}
+/* ==========================================================
+   PLACEHOLDERS
+========================================================== */
+.input-group input::placeholder,
+.input-group textarea::placeholder,
+.input-group select:invalid,
+.upload-placeholder{
+    color:#888888;
+}
+/* =========================================================
+   SELECT
+========================================================== */
+.input-group select{
+    cursor:pointer;
+    appearance:none;
+    -webkit-appearance:none;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M3.2 5.5L8 10.3l4.8-4.8' stroke='%23666' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 18px center;
+
+    padding-right:3rem;
+}
+/* ==========================================================
+   FOCUS
+========================================================== */
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus{
+    transform:translateY(-2px);
+    background:#fff;
+    box-shadow:
+        0 0 0 4px rgba(255,255,255,.30),
+        0 10px 30px rgba(0,0,0,.15);
+}
+/* ==========================================================
+   HIDDEN FIELD
+========================================================== */
+.hidden{
+    display:none;
+}
+/* ==========================================================
+   SUBMIT BUTTON
+========================================================== */
+.submit-btn{
+    margin-top:1rem;
+    width:fit-content;
+
+    display:flex;
+    align-items:center;
+
+    gap:1rem;
+
+    cursor:pointer;
+    border:none;
+    border-radius:var(--radius-small);
+    background:#fff;
+
+    padding:
+        1rem 
+        1.2rem;
+    color:var(--text-dark);
+    font-weight:600;
+    font-size:1rem;
+
+    transition:.35s ease;
+}
+.submit-btn img {
+    width: 30px;
+}
+/* Hover */
+.submit-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 7px 15px rgba(0,0,0,.15);
+}
+
+/* ==========================================================
+   REQUIRED ASTERISK
+========================================================== */
+.input-group span{
+    color:#ffffff;
+}
+/* ==========================================================
+   MOBILE
+========================================================== */
+@media(max-width:900px){
+    .input-row{
+        grid-template-columns:1fr;
+        gap:1.2rem;
+    }
+
+    .submit-btn{
+        width:100%;
+        justify-content:center;
+    }
+}
+/* ==========================================================
+   RIGHT SIDE = CONTACT DETAILS
+========================================================== */
+.contact-info{
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    padding:clamp(1rem,4vw,5rem)
+            0
+            clamp(1rem,4vw,5rem)
+            clamp(1rem,2vw,5rem)
+             ;
+    gap:1.4rem;
+}
+
+.contact-info h3{
+    color:var(--text-dark);
+    font-size:clamp(1.7rem,1.2vw,3.4rem);
+    line-height:1.15;
+}
+
+.contact-benefits {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+    font-size:clamp(1rem,1.1vw,3.4rem);
+}
+
+.contact-details {
+    display: inline-flex;
+    align-items:flex-start;
+    flex-direction: column;
+
+    gap:1.8rem;
+}
+
+.contact-item img {
+    width: 20px;;
+}
+
+.contact-item h4 {
+    display: flex;
+    font-size:clamp(1rem,1.2vw,3.4rem);
+}
+
+.contact-item p{
+    font-size:clamp(1rem,1.1vw,3.4rem);
+}
+
+.contact-item p:hover {
+    color: var(--primary-color);
+    font-size:clamp(1rem,1.1vw,3.4rem);
+    transform:translateX(3px);
+    transition:
+        transform .35s;
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.social-links a:hover {
+    transform:translateY(-3px);
+    transition:
+        transform .35s;
+}
+
+.social-icon{
+    position:relative;
+    display:inline-flex;
+
+    width:42px;
+    height:42px;
+}
+
+.social-icon img{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    transition:opacity .3s ease;
+}
+
+.social-icon .hover{
+    opacity:0;
+}
+
+.social-icon:hover .normal{
+    opacity:0;
+}
+
+.social-icon:hover .hover{
+    opacity:1;
+}
+
+@media(max-width:900px){
+    .contact{
+        grid-template-columns:1fr;
+        gap:1.2rem;
+    }
+
+    .submit-btn{
+        width:100%;
+        justify-content:center;
+    }
+}

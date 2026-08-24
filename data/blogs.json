@@ -1,0 +1,101 @@
+[
+    {
+        "id":"poste-001",
+
+        "title":"Comment choisir un poste transformateur adapté à votre industrie ?",
+
+        "slug": "comment-choisir-poste-transformateur",
+
+        "service": {
+            "slug":"poste-transformateur",
+            "name":"Postes Transformateurs"
+        },
+
+        "date":"2026-07-15",
+
+        "readingTime":"6 min",
+
+        "image":"images/background/poste-transfo.webp",
+
+        "description":"Découvrez les critères essentiels pour sélectionner un poste transformateur HTA/BT performant, sécurisé et conforme aux exigences de votre activité industrielle.",
+
+        "author":"SEJJELEC",
+
+        "content": "data/articles/poste-001.html"
+    },
+
+    {
+        "id": "courant-001",
+
+        "title": "Pourquoi les solutions de courant faible sont-elles importantes pour les entreprises ?",
+
+        "slug": "pourquoi-solutions-courant-faible-importantes-entreprises",
+
+        "service": {
+            "slug": "courant-faible",
+            "name": "Courant Faible"
+        },
+
+        "date": "2026-08-11",
+
+        "readingTime": "6 min",
+
+        "image": "images/background/courant-faible-hero.webp",
+
+        "description": "Découvrez les principales solutions de courant faible pour les entreprises, notamment la détection incendie et les systèmes de sécurité, ainsi que les critères à prendre en compte pour une installation fiable et adaptée.",
+
+        "author": "SEJJELEC",
+
+        "content": "data/articles/courant-001.html"
+    },
+
+    {
+        "id": "electricite-001",
+
+        "title": "Comment optimiser une installation électrique industrielle ?",
+
+        "slug": "comment-optimiser-installation-electrique-industrielle",
+
+        "service": {
+
+            "slug": "electricite-industrielle",
+            "name": "Électricité Industrielle"
+        },
+        "date": "2026-08-18",
+
+        "readingTime": "6 min",
+
+        "image": "images/services/electricite-industrielle.webp",
+
+        "description": "Découvrez les bonnes pratiques pour optimiser une installation électrique industrielle, améliorer sa sécurité et garantir une alimentation fiable et adaptée aux besoins de votre activité.",
+
+        "author": "SEJJELEC",
+
+        "content": "data/articles/electricite-001.html"
+    },
+
+    {
+    "id": "reseaux-001",
+
+    "title": "Réseaux MT/BT : pourquoi une distribution électrique bien conçue est essentielle ?",
+
+    "slug": "reseaux-mt-bt-distribution-electrique-essentielle",
+
+    "service": {
+        "slug": "reseaux-mt-bt",
+        "name": "Réseaux MT/BT"
+    },
+
+    "date": "2026-08-19",
+
+    "readingTime": "6 min",
+
+    "image": "images/background/reseaux-mt-bt-hero.webp",
+
+    "description": "Découvrez pourquoi la conception d'un réseau MT/BT adapté est essentielle pour assurer une distribution électrique fiable, sécurisée et performante dans les installations professionnelles et industrielles.",
+    
+    "author": "SEJJELEC",
+
+    "content": "data/articles/reseaux-001.html"
+}
+]

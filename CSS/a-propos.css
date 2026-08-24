@@ -1,0 +1,273 @@
+/* ==========================
+        VALUES SECTION
+========================== */
+.values{
+    padding-top: clamp(0.9rem,2vw,4.5rem);
+    padding-left: clamp(0.9rem,3vw,3rem);
+    padding-right: clamp(0.9rem,3vw,3rem) ;
+    padding-bottom: clamp(0.9rem,2vw,4.5rem) ;
+    background: var(--background);
+}
+/* ==========================
+        GRID
+========================== */
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:clamp(1.5rem,2vw,2.5rem);
+}
+/* ==========================
+        CARD
+========================== */
+
+.value-card{
+    display:flex;
+    align-items:flex-start;
+    flex-direction: column;
+    gap:1.4rem;
+
+    padding:clamp(2rem,2vw,2.6rem);
+    border-radius: var(--radius-small);
+
+    background:#ffffff;
+
+    transition:.35s ease;
+
+    min-height:300px;
+}
+
+.value-card:nth-child(2){
+    background:#ffba82;
+}
+
+.value-card.active{
+    background:var(--primary-color);
+    
+}
+
+.value-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 25px rgba(41, 16, 0, 0.34);
+}
+
+/* ==========================
+        NUMBER
+========================== */
+
+.value-number{
+    flex-shrink:0;
+    font-size:clamp(2.2rem,3vw,3rem);
+    font-weight:800;
+    color:var(--color-title);
+    line-height:1;
+}
+
+/* ==========================
+        CONTENT
+========================== */
+
+.value-content{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+.value-content h3{
+    font-size:clamp(1.2rem,1.2vw + .5rem,1.8rem);
+    font-weight:700;
+    color:var(--text-dark);
+    line-height:1.3;
+}
+
+.value-content p{
+    font-size:clamp(.95rem,1vw + .1rem,1.1rem);
+    color:var(--text-dark);
+}
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media (max-width:900px){
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+    .value-card{
+        min-height:auto;
+    }
+}
+
+@media (max-width:600px){
+
+    .value-card{
+        flex-direction:column;
+        gap:1rem;
+        padding:2rem;
+    }
+
+    .value-content{
+        gap:1.3rem;
+    }
+}
+
+
+/*===============================================================*/
+
+/* ==========================
+        CLIENTS SECTION
+========================== */
+
+.clients , .agreements{
+    padding-top: clamp(0.9rem,2vw,4.5rem);
+    padding-left: clamp(0.9rem,3vw,3rem);
+    padding-right: clamp(0.9rem,3vw,3rem) ;
+    padding-bottom: clamp(0.9rem,2vw,4.5rem) ;
+}
+.clients-only, .clients , .agreements {
+    background:var(--background-light);
+}
+/* ==========================
+        CLIENT LOGOS
+========================== */
+.clients-slider , .agreements-slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:clamp(1.5rem,3.5vw,4rem);
+}
+/* =====================================
+        SHARED SLIDER
+===================================== */
+
+.agreementsSwiper,
+.clientsSwiper{
+    width:100%;
+    overflow:hidden;
+
+    -webkit-mask-image:linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+
+    mask-image:linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+
+}
+
+.agreementsSwiper .swiper-wrapper,
+.clientsSwiper .swiper-wrapper{
+    align-items:center;
+    transition-timing-function:linear !important;
+}
+
+.agreementsSwiper .swiper-slide,
+.clientsSwiper .swiper-slide{
+    width:auto !important;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.agreementsSwiper .swiper-slide img,
+.clientsSwiper .swiper-slide img{
+    width:clamp(300px,15vw,800px);
+    height: auto;
+    object-fit:contain;
+    opacity:.7;
+    filter:grayscale(100%);
+
+    transition:.35s;
+}
+
+.agreementsSwiper .swiper-slide:hover img,
+.clientsSwiper .swiper-slide:hover img{
+    opacity:1;
+    filter:none;
+    transform:scale(1.05);
+}
+
+/* ==========================
+        STATISTICS
+========================== */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:2rem;
+}
+
+.stat-card{
+    text-align:center;
+    position:relative;
+    padding:1rem;
+}
+
+.stat-card:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:2px;
+    height:55px;
+}
+
+.stat-card h3, .stat-card .counter{
+    font-size:clamp(2.5rem,4.2vw,4rem);
+    font-weight:640;
+    color:var(--text-dark);
+    line-height:1;
+}
+
+.stat-card span{
+    font-family: var(--outfit);
+    color:var(--primary-color);
+    font-size:.65em;
+
+}
+
+.stat-card p{
+    margin-top:.5rem;
+    color:var(--text-gray);
+    font-size:clamp(.8rem,.9vw,1rem);
+    font-weight: 500;
+}
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media (max-width:900px){
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        gap:2rem;
+    }
+
+    .stat-card:nth-child(2)::after{
+        display:none;
+    }
+
+}
+
+@media (max-width:600px){
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .stat-card::after{
+        display:none;
+    }
+}

@@ -1,0 +1,90 @@
+.app-modal{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+.app-modal.show{
+
+    opacity:1;
+    visibility:visible;
+
+}
+
+.app-box{
+
+    background:#fff;
+
+    width:min(500px,90%);
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.2);
+
+}
+
+.app-icon{
+
+    width:90px;
+    height:90px;
+
+    background:#fff;
+
+}
+
+.app-icon img{
+
+    width:100%;
+
+}
+
+.app-box h2{
+
+    margin-bottom:15px;
+
+}
+
+.app-box p{
+
+    color:#666;
+    line-height:1.7;
+
+}
+
+.app-box button{
+
+    margin-top:30px;
+
+    border:none;
+
+    background:var(--primary-color);
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
