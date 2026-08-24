@@ -149,6 +149,71 @@
             background-image:url(images/services/poste-transfo.webp);
             transform:scaleX(-1);
         }
+
+        /* =========================
+        SERVICE LIST
+        ========================= */
+
+        .service-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        /* Section title */
+
+        .service-list-title {
+            margin-bottom: .4rem;
+
+            font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+            font-weight: 700;
+
+            color: var(--primary-color);
+        }
+
+        /* List items */
+
+        .service-list > li:not(.service-list-title) {
+            position: relative;
+
+            padding-left: 1.5rem;
+
+            color: var(--text-dark);
+            font-size: clamp(.9rem, 1vw, 1.05rem);
+            line-height: 1.6;
+
+            transition: color .3s ease,
+                        transform .3s ease;
+        }
+
+        /* Orange bullet */
+
+        .service-list > li:not(.service-list-title)::before {
+            content: "";
+            
+            position: absolute;
+            left: 0;
+            top: .7em;
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+            background: var(--primary-color);
+
+            transform: translateY(-50%);
+        }
+
+        /* Hover */
+
+        .service-list > li:not(.service-list-title):hover {
+            color: var(--text-dark);
+            transform: translateX(4px);
+        }
     </style>
 
 </head>
@@ -242,7 +307,6 @@
         <section class="about" id="about">
             <div class="about container">
                 <!-- Section Heading -->
-                
                 <div class="about-content">
                     <!-- Left Column -->
                     <div class="about-text">
@@ -250,29 +314,54 @@
                             <h2>À propos de ce service</h2>
                         </div>
 
-                        <h3>Postes de transformation HTA/BT</h3>
+                        <h3>Postes transformateurs HTA/BT</h3>
 
                         <p>
-                        SEJJELEC accompagne les industriels, promoteurs, collectivités 
-                        et exploitants dans l'étude, la conception et la réalisation de 
-                        postes de transformation HTA/BT adaptés aux besoins de chaque 
-                        installation. Nous proposons des solutions clés en main garantissant
-                        une alimentation électrique fiable, sécurisée et conforme aux 
-                        exigences techniques de l'ONEE.
+                            Chez SEJJELEC, nous accompagnons les industriels, promoteurs, collectivités et exploitants au Maroc dans l’étude, la conception, l’installation et la mise en service de postes de transformation HTA/BT. Nous proposons des solutions adaptées aux besoins de chaque installation afin d’assurer une alimentation électrique fiable, sécurisée et adaptée aux exigences de vos infrastructures.
                         </p>
 
-                        <p>
-                        Nos équipes assurent l'installation, le raccordement, 
-                        la maintenance préventive et curative ainsi que la rénovation des 
-                        postes de transformation. Nous intervenons sur les cellules HTA, 
-                        transformateurs, tableaux basse tension et équipements de protection 
-                        afin d'assurer la continuité de service, la sécurité des installations 
-                        et la performance énergétique de vos infrastructures.
-                        </p>
+                        <ul class="service-list">
+                            <li class="service-list-title">I. Postes transformateurs de 50 à 1250 kVA</li>
 
-                        <div class="badge-accordion ">
+                            <li>
+                                <p>SEJJELEC réalise des postes transformateurs HTA/BT de 50 à 1250 kVA, permettant d’adapter la distribution électrique aux besoins en puissance des bâtiments, sites industriels et installations professionnelles.</p>
+                                <p>Chaque projet fait l’objet d’une étude prenant en compte les caractéristiques de l’installation, la puissance nécessaire et les contraintes techniques du site afin de proposer une solution adaptée.</p>
+                            </li>
+
+                            <li class="service-list-title">II. Cellules HTA normales et étanches</li>
+
+                            <li>
+                                <p>Les cellules HTA jouent un rôle essentiel dans la protection, la commande et la distribution de l’énergie électrique au niveau du poste de transformation. SEJJELEC intervient sur l’installation et le raccordement de cellules HTA normales et étanches, selon la configuration et les exigences du projet.</p>
+                                <p>Ces équipements permettent d’assurer une distribution électrique organisée tout en contribuant à la sécurité et à la fiabilité de l’installation.</p>
+                            </li>
+
+                            <li class="service-list-title">III. Postes sources et équipements de transformation</li>
+
+                            <li>
+                                <p>SEJJELEC intervient également sur les différents équipements associés aux postes sources et postes de transformation, notamment les transformateurs, tableaux basse tension et équipements de protection.</p>
+                                <p>L’ensemble de ces équipements est intégré de manière cohérente afin d’assurer la distribution de l’énergie électrique vers les différents circuits et équipements de l’installation.</p>
+                            </li>                           
+                        </ul>
+                    </div>
+
+
+                    <!-- Right Column -->
+                    <div class="about-right">
+
+                        <figure class="about-image">
+                            <img
+                                src="images/services/poste-transfo.webp"
+                                alt="Installation d'un poste de transformation HTA BT réalisée par les équipes SEJJELEC">
+                            <figcaption>
+                                Installation, raccordement et maintenance de postes de transformation
+                                HTA/BT pour les sites industriels, tertiaires et infrastructures 
+                                électriques partout au Maroc.
+                            </figcaption>
+                        </figure>
+
+                        <div class="badge-accordion">
                             <!-- 01 -->
-                            <article class="badge-accordion-item active ">
+                            <article class="badge-accordion-item active">
                                 <button class="badge-accordion-header">
                                     <div class="accordion-left">
                                         <h3>Agréée par l'ONE</h3>
@@ -281,7 +370,11 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est agréée par l’ONEE pour la réalisation de travaux électriques. Cette reconnaissance atteste de notre expertise et de notre conformité aux exigences techniques.</p>
+                                    <p>
+                                        SEJJELEC est agréée par l’ONEE pour la réalisation de travaux
+                                        électriques. Cette reconnaissance atteste de notre expertise
+                                        et de notre conformité aux exigences techniques.
+                                    </p>
                                 </div>
                             </article>
 
@@ -295,32 +388,27 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est classifiée et qualifiée pour la réalisation de travaux techniques, témoignant de la qualité et de la fiabilité de ses interventions.</p>
+                                    <p>
+                                        SEJJELEC est classifiée et qualifiée pour la réalisation de
+                                        travaux techniques, témoignant de la qualité et de la fiabilité
+                                        de ses interventions.
+                                    </p>
                                 </div>
                             </article>
+
                         </div>
+
                         <div class="about-badges">
                             <span class="badge badge-outline">
-                                <a href="#contact" >
-                                    Obtener une etude gratuite
+                                <a href="#contact">
+                                    Demander une consultation
                                 </a>
                                 <img src="images/icons/arrow.png" alt="">
                             </span>
                         </div>
+
                     </div>
 
-
-                    <!-- Right Column -->
-                    <figure class="about-image">
-                        <img
-                            src="images/services/poste-transfo.webp"
-                            alt="Installation d'un poste de transformation HTA BT réalisée par les équipes SEJJELEC">
-                        <figcaption>
-                        Installation, raccordement et maintenance de postes de transformation
-                        HTA/BT pour les sites industriels, tertiaires et infrastructures 
-                        électriques partout au Maroc.
-                        </figcaption>
-                    </figure>
                 </div>
             </div>
         </section>

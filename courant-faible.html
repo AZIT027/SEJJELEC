@@ -65,7 +65,7 @@
     <link rel="stylesheet" href="CSS/floating-icons.css">
     <link rel="stylesheet" href="CSS/app-modal.css">
     <link rel="stylesheet" href="CSS/map.css">
-        <link rel="stylesheet" href="CSS/badge-accordion.css">
+    <link rel="stylesheet" href="CSS/badge-accordion.css">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -91,6 +91,71 @@
         .value-card.active{
             background:var(--primary-color);
             
+        }
+        /* =========================
+        SERVICE LIST
+        ========================= */
+
+        .service-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        /* Section title */
+
+        .service-list-title {
+            margin-bottom: .4rem;
+
+            font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+            font-weight: 700;
+
+            color: var(--primary-color);
+        }
+
+        /* List items */
+
+        .service-list > li:not(.service-list-title) {
+            position: relative;
+
+            padding-left: 1.5rem;
+
+            color: var(--text-dark);
+            font-size: clamp(.9rem, 1vw, 1.05rem);
+            line-height: 1.6;
+
+            transition: color .3s ease,
+                        transform .3s ease;
+        }
+
+        /* Orange bullet */
+
+        .service-list > li:not(.service-list-title)::before {
+            content: "";
+            
+            position: absolute;
+            left: 0;
+            top: .7em;
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+            background: var(--primary-color);
+
+            transform: translateY(-50%);
+        }
+
+        /* Hover */
+
+        .service-list > li:not(.service-list-title):hover {
+            color: var(--text-dark);
+            transform: translateX(4px);
         }
     </style>
 
@@ -148,6 +213,70 @@
         .hero::before{
             background-image:url(images/background/courant-faible-hero.webp);
             transform:scaleX(1);
+        }
+        /* =========================
+        SERVICE LIST
+        ========================= */
+
+        .service-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        /* Section title */
+
+        .service-list-title {
+            margin-bottom: .4rem;
+
+            font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+            font-weight: 700;
+
+            color: var(--primary-color);
+        }
+
+        /* List items */
+
+        .service-list > li:not(.service-list-title) {
+            position: relative;
+
+            padding-left: 1.5rem;
+
+            color: var(--text-dark);
+            font-size: clamp(.9rem, 1vw, 1.05rem);
+            line-height: 1.6;
+
+            transition: color .3s ease,
+                        transform .3s ease;
+        }
+
+        /* Orange bullet */
+
+        .service-list > li:not(.service-list-title)::before {
+            content: "";
+            
+            position: absolute;
+            left: 0;
+            top: .7em;
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+            background: var(--primary-color);
+
+            transform: translateY(-50%);
+        }
+
+        /* Hover */
+
+        .service-list > li:not(.service-list-title):hover {
+            color: var(--text-dark);
+            transform: translateX(4px);
         }
     </style>
 
@@ -251,16 +380,52 @@
                         <h3>Solutions de courant faible</h3>
 
                         <p>
-                            Chez SEJJELEC, nous accompagnons les entreprises, industries et établissements au Maroc dans la mise en place de solutions de courant faible fiables et adaptées à leurs besoins en matière de sécurité et d’infrastructure informatique.                        
+                            Chez SEJJELEC, nous accompagnons les entreprises, industries, bâtiments professionnels et établissements au Maroc dans la conception, l’installation et la maintenance de solutions de courant faible adaptées à leurs besoins. Nos prestations permettent de renforcer la sécurité des locaux, de protéger les équipements et les données, et d’améliorer la continuité et la fiabilité des infrastructures professionnelles.
                         </p>
 
-                        <p>
-                            Nos équipes assurent l’installation et la maintenance de systèmes de vidéosurveillance, caméras de sécurité, serveurs informatiques et systèmes de détection incendie. Chaque installation est pensée pour renforcer la sécurité de vos locaux, protéger vos données et garantir la continuité de vos activités grâce à des solutions performantes et évolutives.
-                        </p>
+                        <ul class="service-list">
+                            <li class="service-list-title">I. Installation de systèmes de vidéosurveillance et caméras de sécurité</li>
 
-                        <div class="badge-accordion ">
+                            <li>
+                                <p>La vidéosurveillance permet de sécuriser les bâtiments, de surveiller les zones sensibles et de prévenir les risques d’intrusion. SEJJELEC installe des caméras de surveillance adaptées aux caractéristiques de chaque site.</p>
+                                <p>Nos solutions de vidéosurveillance IP conviennent aux entreprises, commerces, bâtiments professionnels et sites industriels. Nous assurons également la maintenance des équipements afin de garantir leur bon fonctionnement.</p>
+                            </li>
+
+                            <li class="service-list-title">II. Installation de serveurs informatiques</li>
+
+                            <li>
+                                <p>SEJJELEC met en place des infrastructures informatiques et des serveurs pour les entreprises et établissements professionnels. Une installation adaptée favorise une meilleure organisation des équipements, une communication fiable et une bonne disponibilité des ressources informatiques.</p>
+                                <p>Nous intégrons les équipements nécessaires en tenant compte de vos besoins en matière de connectivité, de performance et de continuité de service.</p>
+                            </li>
+
+                            <li class="service-list-title">III. Systèmes de détection incendie</li>
+
+                            <li>
+                                <p>SEJJELEC installe des systèmes de détection incendie adaptés aux caractéristiques de chaque bâtiment. Ces solutions permettent de détecter rapidement les départs de feu et de renforcer la sécurité des personnes, des équipements et des locaux.</p>
+                            </li>                           
+                        </ul>
+                    </div>
+
+
+                    <!-- Right Column -->
+                    <div class="about-right">
+
+                        <figure class="about-image">
+                            <img 
+                                src="images/services/courant-faible.webp"
+                                alt="Installation d'un réseau informatique et d'un système de vidéosurveillance par les équipes SEJJELEC">
+
+                            <figcaption>
+                                Déploiement de réseaux informatiques, systèmes de vidéosurveillance,
+                                détection incendie et solutions de sécurité électronique pour les
+                                entreprises partout au Maroc.
+                            </figcaption>
+                        </figure>
+
+                        <div class="badge-accordion">
+
                             <!-- 01 -->
-                            <article class="badge-accordion-item active ">
+                            <article class="badge-accordion-item active">
                                 <button class="badge-accordion-header">
                                     <div class="accordion-left">
                                         <h3>Agréée par l'ONE</h3>
@@ -269,7 +434,11 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est agréée par l’ONEE pour la réalisation de travaux électriques. Cette reconnaissance atteste de notre expertise et de notre conformité aux exigences techniques.</p>
+                                    <p>
+                                        SEJJELEC est agréée par l’ONEE pour la réalisation de travaux
+                                        électriques. Cette reconnaissance atteste de notre expertise
+                                        et de notre conformité aux exigences techniques.
+                                    </p>
                                 </div>
                             </article>
 
@@ -283,30 +452,27 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est classifiée et qualifiée pour la réalisation de travaux techniques, témoignant de la qualité et de la fiabilité de ses interventions.</p>
+                                    <p>
+                                        SEJJELEC est classifiée et qualifiée pour la réalisation de
+                                        travaux techniques, témoignant de la qualité et de la fiabilité
+                                        de ses interventions.
+                                    </p>
                                 </div>
                             </article>
+
                         </div>
+
                         <div class="about-badges">
                             <span class="badge badge-outline">
-                                <a href="#contact" >
+                                <a href="#contact">
                                     Demander une consultation
                                 </a>
                                 <img src="images/icons/arrow.png" alt="">
                             </span>
                         </div>
+
                     </div>
 
-
-                    <!-- Right Column -->
-                    <figure class="about-image">
-                        <img 
-                            src="images/services/courant-faible.webp"
-                            alt="Installation d'un réseau informatique et d'un système de vidéosurveillance par les équipes SEJJELEC">
-                        <figcaption>
-                            Déploiement de réseaux informatiques, systèmes de vidéosurveillance, détection incendie et solutions de sécurité électronique pour les entreprises partout au Maroc.
-                        </figcaption>
-                    </figure>
                 </div>
             </div>
         </section>

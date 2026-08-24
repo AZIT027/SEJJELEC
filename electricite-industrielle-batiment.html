@@ -156,6 +156,71 @@
             background-image:url(images/background/elec-industirelle.webp);
             transform:scaleX(1);
         }
+
+        /* =========================
+        SERVICE LIST
+        ========================= */
+
+        .service-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        /* Section title */
+
+        .service-list-title {
+            margin-bottom: .4rem;
+
+            font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+            font-weight: 700;
+
+            color: var(--primary-color);
+        }
+
+        /* List items */
+
+        .service-list > li:not(.service-list-title) {
+            position: relative;
+
+            padding-left: 1.5rem;
+
+            color: var(--text-dark);
+            font-size: clamp(.9rem, 1vw, 1.05rem);
+            line-height: 1.6;
+
+            transition: color .3s ease,
+                        transform .3s ease;
+        }
+
+        /* Orange bullet */
+
+        .service-list > li:not(.service-list-title)::before {
+            content: "";
+            
+            position: absolute;
+            left: 0;
+            top: .7em;
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+            background: var(--primary-color);
+
+            transform: translateY(-50%);
+        }
+
+        /* Hover */
+
+        .service-list > li:not(.service-list-title):hover {
+            color: var(--text-dark);
+            transform: translateX(4px);
+        }
     </style>
 
 </head>
@@ -249,7 +314,6 @@
         <section class="about" id="about">
             <div class="about container">
                 <!-- Section Heading -->
-                
                 <div class="about-content">
                     <!-- Left Column -->
                     <div class="about-text">
@@ -260,16 +324,51 @@
                         <h3>Électricité industrielle & bâtiment</h3>
 
                         <p>
-                            SEJJELEC assure la conception, l’installation et la mise en service des équipements électriques industriels, avec des solutions adaptées aux exigences de chaque installation. Notre expertise comprend notamment la réalisation et le raccordement de TGBT (Tableaux Généraux Basse Tension), le câblage des armoires électriques, ainsi que l’installation et le raccordement de coffrets secondaires.
+                            Chez SEJJELEC, nous accompagnons les entreprises, industries et sites professionnels au Maroc dans la conception, l’installation et la mise en service de leurs infrastructures électriques industrielles. Nous proposons des solutions adaptées aux besoins de chaque installation afin d’assurer une distribution électrique fiable, sécurisée et adaptée aux contraintes de l’environnement industriel.
                         </p>
 
-                        <p>
-                            Nous intervenons également sur la distribution électrique, le raccordement des équipements et l’organisation des installations afin d’assurer sécurité, fiabilité et continuité de fonctionnement. Chaque réalisation est étudiée selon les besoins du projet et les contraintes de l’environnement industriel.
-                        </p>
+                        <ul class="service-list">
+                            <li class="service-list-title">I. Conception et installation des équipements électriques industriels</li>
 
-                        <div class="badge-accordion ">
+                            <li>
+                                <p>La conception d’une installation électrique industrielle nécessite une étude adaptée aux besoins du site, aux équipements utilisés et aux contraintes de fonctionnement. SEJJELEC réalise des installations électriques conçues pour répondre aux exigences spécifiques de chaque projet.</p>
+                                <p>Nos équipes interviennent notamment sur la réalisation et le raccordement des TGBT (Tableaux Généraux Basse Tension), le câblage des armoires électriques ainsi que l’installation et le raccordement des coffrets électriques secondaires.</p>
+                            </li>
+
+                            <li class="service-list-title">II. TGBT et armoires électriques</li>
+
+                            <li>
+                                <p>Le TGBT constitue un élément essentiel de la distribution électrique d’une installation industrielle. Il permet de répartir l’énergie électrique vers les différents équipements et circuits du site.</p>
+                                <p>SEJJELEC assure la réalisation, l’installation et le raccordement des TGBT et armoires électriques, en tenant compte de l’organisation de l’installation et des besoins de distribution électrique.</p>
+                            </li>
+
+                            <li class="service-list-title">III. Distribution et raccordement électrique</li>
+
+                            <li>
+                                <p>SEJJELEC intervient dans la mise en place de la distribution électrique industrielle ainsi que dans le raccordement des différents équipements et circuits. Nos équipes veillent à l’organisation des installations afin de faciliter leur exploitation et leur maintenance.</p>
+                            </li>                           
+                        </ul>
+                    </div>
+
+
+                    <!-- Right Column -->
+                    <div class="about-right">
+
+                        <figure class="about-image">
+                            <img 
+                                src="images/services/electricite-industrielle.webp" 
+                                alt="Installation de tableaux électriques industriels par les techniciens SEJJELEC">
+
+                            <figcaption>
+                                Nos équipes interviennent sur des projets industriels et tertiaires
+                                partout au Maroc avec des solutions électriques fiables et conformes.
+                            </figcaption>
+                        </figure>
+
+                        <div class="badge-accordion">
+
                             <!-- 01 -->
-                            <article class="badge-accordion-item active ">
+                            <article class="badge-accordion-item active">
                                 <button class="badge-accordion-header">
                                     <div class="accordion-left">
                                         <h3>Agréée par l'ONE</h3>
@@ -278,7 +377,11 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est agréée par l’ONEE pour la réalisation de travaux électriques. Cette reconnaissance atteste de notre expertise et de notre conformité aux exigences techniques.</p>
+                                    <p>
+                                        SEJJELEC est agréée par l’ONEE pour la réalisation de travaux
+                                        électriques. Cette reconnaissance atteste de notre expertise
+                                        et de notre conformité aux exigences techniques.
+                                    </p>
                                 </div>
                             </article>
 
@@ -292,31 +395,27 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est classifiée et qualifiée pour la réalisation de travaux techniques, témoignant de la qualité et de la fiabilité de ses interventions.</p>
+                                    <p>
+                                        SEJJELEC est classifiée et qualifiée pour la réalisation de
+                                        travaux techniques, témoignant de la qualité et de la fiabilité
+                                        de ses interventions.
+                                    </p>
                                 </div>
                             </article>
+
                         </div>
+
                         <div class="about-badges">
                             <span class="badge badge-outline">
-                                <a href="#contact" >
-                                    Obtener une etude gratuite
+                                <a href="#contact">
+                                    Demander une consultation
                                 </a>
                                 <img src="images/icons/arrow.png" alt="">
                             </span>
                         </div>
+
                     </div>
 
-
-                    <!-- Right Column -->
-                    <figure class="about-image">
-                        <img
-                            src="images/services/electricite-industrielle.webp"
-                            alt="Installation de tableaux électriques industriels par les techniciens SEJJELEC">
-                        <figcaption>
-                            Nos équipes interviennent sur des projets industriels et tertiaires
-                            partout au Maroc avec des solutions électriques fiables et conformes.
-                        </figcaption>
-                    </figure>
                 </div>
             </div>
         </section>

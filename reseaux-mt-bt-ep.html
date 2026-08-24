@@ -145,6 +145,71 @@
             background-image:url(images/background/reseaux-mt-bt-hero.webp);
             transform:scaleX(-1);
         }
+
+        /* =========================
+        SERVICE LIST
+        ========================= */
+
+        .service-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        /* Section title */
+
+        .service-list-title {
+            margin-bottom: .4rem;
+
+            font-size: clamp(1.1rem, 1.2vw, 1.4rem);
+            font-weight: 700;
+
+            color: var(--primary-color);
+        }
+
+        /* List items */
+
+        .service-list > li:not(.service-list-title) {
+            position: relative;
+
+            padding-left: 1.5rem;
+
+            color: var(--text-dark);
+            font-size: clamp(.9rem, 1vw, 1.05rem);
+            line-height: 1.6;
+
+            transition: color .3s ease,
+                        transform .3s ease;
+        }
+
+        /* Orange bullet */
+
+        .service-list > li:not(.service-list-title)::before {
+            content: "";
+            
+            position: absolute;
+            left: 0;
+            top: .7em;
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+            background: var(--primary-color);
+
+            transform: translateY(-50%);
+        }
+
+        /* Hover */
+
+        .service-list > li:not(.service-list-title):hover {
+            color: var(--text-dark);
+            transform: translateX(4px);
+        }
     </style>
 </head>
 <body>
@@ -244,19 +309,55 @@
                             <h2>À propos de ce service</h2>
                         </div>
 
-                        <h3>Réseaux MT/BT & éclairage public</h3>
+                        <h3>Réseaux MT/BT & éclairage public au Maroc</h3>
 
                         <p>
-                        Chez SEJJELEC, nous accompagnons les industriels, promoteurs, collectivités et exploitants au Maroc dans la conception et la réalisation de postes transformateurs HTA/BT de 50 à 1250 kVA, adaptés aux besoins de chaque installation.
+                            Chez SEJJELEC, nous accompagnons les industriels, promoteurs, collectivités et exploitants au Maroc dans l’étude, la conception, l’installation et la maintenance des réseaux MT/BT et des installations d’éclairage public. Nous proposons des solutions adaptées aux caractéristiques de chaque site afin d’assurer une distribution électrique fiable, sécurisée et performante.
                         </p>
 
-                        <p>
-                        Nos experts interviennent sur l’ensemble des équipements, notamment les postes sources, cellules HTA étanches et normales, transformateurs et tableaux basse tension, afin de garantir une alimentation électrique fiable, sécurisée et performante. De l’étude à l’installation, au raccordement et à la maintenance préventive ou curative, nous proposons des solutions adaptées aux exigences techniques de chaque projet. Faites confiance à SEJJELEC pour assurer la continuité de service et la performance de vos infrastructures électriques au Maroc.
-                        </p>
+                        <ul class="service-list">
+                            <li class="service-list-title">I. Réseaux Moyenne Tension (MT)</li>
 
-                        <div class="badge-accordion ">
+                            <li>
+                                <p>Les réseaux Moyenne Tension (MT) permettent d’assurer l’acheminement et la distribution de l’énergie électrique vers les postes de transformation et les différentes installations. SEJJELEC intervient dans la réalisation des infrastructures MT en tenant compte des besoins du projet et des contraintes techniques du site.</p>
+                                <p>Nos équipes assurent notamment la mise en œuvre des équipements nécessaires à la distribution et au raccordement des réseaux, avec une attention particulière portée à la fiabilité et à la continuité de l’alimentation électrique.</p>
+                            </li>
+
+                            <li class="service-list-title">II. Réseaux Basse Tension (BT)</li>
+
+                            <li>
+                                <p>SEJJELEC réalise également des réseaux Basse Tension (BT) destinés à distribuer l’énergie électrique vers les bâtiments, équipements et installations professionnelles. Nos interventions permettent d’organiser efficacement la distribution électrique et d’assurer le raccordement des différents points d’utilisation.</p>
+                                <p>Chaque réseau est étudié selon la configuration du site, les besoins en énergie et les caractéristiques des équipements à alimenter.</p>
+                            </li>
+
+                            <li class="service-list-title">III. Éclairage public</li>
+
+                            <li>
+                                <p>L’éclairage public contribue à la sécurité et au confort des espaces urbains, industriels et professionnels. SEJJELEC intervient dans l’installation et le raccordement des infrastructures nécessaires à l’éclairage des voies, espaces extérieurs et zones publiques ou professionnelles.</p>
+                                <p>Nos solutions sont conçues pour répondre aux caractéristiques de chaque projet et assurer un fonctionnement fiable des installations d’éclairage.</p>
+                            </li>                           
+                        </ul>
+                    </div>
+
+
+                    <!-- Right Column -->
+                    <div class="about-right">
+
+                        <figure class="about-image">
+                            <img
+                                src="images/services/reseaux-mt-bt.webp"
+                                alt="Construction d'un réseau électrique moyenne tension et basse tension réalisée par SEJJELEC">
+                            <figcaption>
+                                Construction, extension et maintenance de réseaux électriques
+                                MT/BT et d'éclairage public réalisées par les équipes
+                                SEJJELEC partout au Maroc.                        
+                            </figcaption>
+                        </figure>
+
+                        <div class="badge-accordion">
+
                             <!-- 01 -->
-                            <article class="badge-accordion-item active ">
+                            <article class="badge-accordion-item active">
                                 <button class="badge-accordion-header">
                                     <div class="accordion-left">
                                         <h3>Agréée par l'ONE</h3>
@@ -265,7 +366,11 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est agréée par l’ONEE pour la réalisation de travaux électriques. Cette reconnaissance atteste de notre expertise et de notre conformité aux exigences techniques.</p>
+                                    <p>
+                                        SEJJELEC est agréée par l’ONEE pour la réalisation de travaux
+                                        électriques. Cette reconnaissance atteste de notre expertise
+                                        et de notre conformité aux exigences techniques.
+                                    </p>
                                 </div>
                             </article>
 
@@ -279,32 +384,27 @@
                                 </button>
 
                                 <div class="badge-accordion-content">
-                                    <p>SEJJELEC est classifiée et qualifiée pour la réalisation de travaux techniques, témoignant de la qualité et de la fiabilité de ses interventions.</p>
+                                    <p>
+                                        SEJJELEC est classifiée et qualifiée pour la réalisation de
+                                        travaux techniques, témoignant de la qualité et de la fiabilité
+                                        de ses interventions.
+                                    </p>
                                 </div>
                             </article>
+
                         </div>
+
                         <div class="about-badges">
                             <span class="badge badge-outline">
-                                <a href="#contact" >
+                                <a href="#contact">
                                     Demander une consultation
                                 </a>
                                 <img src="images/icons/arrow.png" alt="">
                             </span>
                         </div>
+
                     </div>
 
-
-                    <!-- Right Column -->
-                    <figure class="about-image">
-                        <img
-                            src="images/services/reseaux-mt-bt.webp"
-                            alt="Construction d'un réseau électrique moyenne tension et basse tension réalisée par SEJJELEC">
-                        <figcaption>
-                            Construction, extension et maintenance de réseaux électriques
-                            MT/BT et d'éclairage public réalisées par les équipes
-                            SEJJELEC partout au Maroc.                        
-                        </figcaption>
-                    </figure>
                 </div>
             </div>
         </section>
